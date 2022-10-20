@@ -9,15 +9,14 @@ var password = document.querySelector('.password');
 var dataItems = document.querySelector('.data-items');
 var user1 = sessionStorage.getItem('username');
 var pass1 = sessionStorage.getItem('password');
+var deleteAll = document.querySelector('.deleteAll-btn a');
 var editId = null;
 
 function homeFunction() {
   var data = JSON.parse(localStorage.getItem('itemName'));
   var collection = data ? data : [];
-
   document.load = dataLoad();
   function dataLoad() {
-    collection = JSON.parse(localStorage.getItem('itemName'));
     if (collection != null) {
       var li = '';
       collection.forEach(function (list, index) {
@@ -58,7 +57,20 @@ function homeFunction() {
             quantity.value = edBtn.parentElement.parentElement.children[2].innerText;
           })
         })
-      };
+      };   
+      // Delete All function
+      if (dataItems.children.length != 0) {
+        console.log('working');
+        deleteAll.parentElement.classList.remove('hide-content');
+        deleteAll.addEventListener('click', function () {
+          localStorage.removeItem('itemName');
+          collection = [];
+          homeFunction();
+        })
+      } else {
+        deleteAll.parentElement.classList.add('hide-content');
+      }
+
     }
   }
   // submit function
@@ -88,6 +100,7 @@ function homeFunction() {
   // logout function
   logoutBtn.addEventListener('click', function () {
     location.href = './login.html';
+    sessionStorage.clear();
   })
 }
 
@@ -127,6 +140,7 @@ if (document.body.classList.contains("home")) {
     loginFunction();
   }
 }
+
 
 
 
