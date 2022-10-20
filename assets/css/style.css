@@ -82,6 +82,11 @@ sub { bottom: -.25em; }
 .cf { *zoom: 1; }
 
 /*for all*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -106,11 +111,38 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
+header { background: rgb(0,0,0); }
+.home header { position: relative; }
 
+.heading,.data-heading {
+  padding: 10px 0;
+  color: rgb(255,255,255);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
 
+.logout-btn {
+  position: absolute;
+  top: 10px;
+  right: 2%;
+}
 
+.logout-btn a {
+  padding: 8px 20px;
+  background: rgb(255, 255, 255);
+  color: rgb(0,0,0);
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all .5s ease;
+}
 
-
+.logout-btn a:hover {
+  transform: scale(1.1);
+  background: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
 
 /*=================================
   Header styling ends here
@@ -119,36 +151,118 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+.userLogin {
+  padding-bottom: 6px;
+  background: rgb(189, 183, 183);
+}
+.userLogin .form-container { height: 91vh; }
+.dataRegister .form-container { height: 80vh; }
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.userLogin form,.dataRegister form{
+  width: 30%;
+  min-width: 300px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background: rgb(255,255,255);
+ 
+}
+.userLogin form { box-shadow: 6px 6px 14px rgb(146, 144, 144); }
+.dataRegister form { box-shadow: 3px 3px 13px rgb(212, 209, 209); }
 
+form h2 {
+  padding: 10px 0 20px 0;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
 
+.input-group {
+  padding: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.input-group label { 
+  padding-bottom: 7px;
+  text-transform: capitalize;
+}
 
+.input-group input,.input-control input {
+  width: 100%;
+  padding: 8px 2%;
+  border: 1px solid rgb(189, 183, 183);
+  outline: none;
+}
 
+.input-control { padding: 20px 0; }
 
+.input-control input {
+  padding: 10px;
+  border: none;
+  background: rgb(0,0,0);
+  color: rgb(255,255,255);
+  font-weight: bold;
+  font-size: 17px;
+  transition: all .5s ease;
+}
 
+.input-control input:hover { background: rgb(146, 144, 144);}
+.hide-content { display: none; }
 
+.data-items {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.head-items { border-bottom: 2px solid rgb(0,0,0); }
+.head-items,.item-store {
+  padding: 10px 0;
+  display: flex;
+  gap: 40px;
+}
+
+.head-list,.store-list { flex-basis: 30%; }
+.item-store { border-bottom: 1px solid rgb(0,0,0); }
+
+.store-list {
+  display: flex;
+  align-items: center;
+}
+
+.store-list:nth-child(2),.store-list:nth-child(3) { word-break: break-all; }
+
+.head-list h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.edit-btn {
+  padding: 6px 20px;
+  background: rgb(255,255,0);
+  color: rgb(0,0,0);
+  box-shadow: 2px 2px 4px rgb(216, 211, 211);
+  transition: all .5s ease;
+}
+
+.delete-btn {
+  padding: 6px 20px;
+  background: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 4px rgb(165, 163, 163);
+  transition: all .5s ease;
+}
+.edit-btn,.delete-btn {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.edit-btn:hover { background: rgb(212, 212, 11); }
+.delete-btn:hover { background: rgb(230, 81, 81); }
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+ 
