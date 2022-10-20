@@ -19,17 +19,40 @@
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="loginPage">
   <!--container start-->
   <div class="container">
     <!--header section start-->
     <header>
-
+      <div class="wrapper">
+        <h1 class="heading">Login Page</h1>
+      </div>
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
-
+      <section class="userLogin">
+        <div class="wrapper">
+          <div class="form-container">
+            <form action="#FIXME" class="loginForm">
+              <h2>Login</h2>
+              <div class="input-group">
+                <label for="username">username</label>
+                <input type="text" class="username" placeholder="username@mail.com">
+                <span class="inputErr hide-content">error</span>
+              </div>
+              <div class="input-group">
+                <label for="password">password</label>
+                <input type="password" class="password" placeholder="Password">
+                <span class="inputErr hide-content">error</span>
+              </div>
+              <div class="input-control">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <!--main section end-->
 
@@ -43,5 +66,4 @@
   <!--container end-->
   <script src="assets/js/script.js"></script>
 </body>
-
 </html>
