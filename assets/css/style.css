@@ -296,7 +296,12 @@ form h2 {
   font-size: 15px;
   text-transform: capitalize;
 }
-.deleteAll-btn { text-align: right; }
+
+.deleteAll-btn {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
 .deleteAll-btn a { font-weight: bold; }
 .edit-btn:hover { background: rgb(212, 212, 11); }
 .delete-btn:hover ,.deleteAll-btn a:hover{ background: rgb(230, 81, 81); }
