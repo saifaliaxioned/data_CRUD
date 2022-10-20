@@ -85,10 +85,12 @@ sub { bottom: -.25em; }
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -135,11 +137,15 @@ header { background: rgb(0,0,0); }
   text-transform: capitalize;
   font-size: 14px;
   font-weight: bold;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
   transition: all .5s ease;
 }
 
 .logout-btn a:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
   background: rgb(255, 0, 0);
   color: rgb(255, 255, 255);
 }
@@ -158,9 +164,15 @@ header { background: rgb(0,0,0); }
 .userLogin .form-container { height: 91vh; }
 .dataRegister .form-container { height: 80vh; }
 .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .userLogin form,.dataRegister form{
@@ -171,8 +183,8 @@ header { background: rgb(0,0,0); }
   background: rgb(255,255,255);
  
 }
-.userLogin form { box-shadow: 6px 6px 14px rgb(146, 144, 144); }
-.dataRegister form { box-shadow: 3px 3px 13px rgb(212, 209, 209); }
+.userLogin form { -webkit-box-shadow: 6px 6px 14px rgb(146, 144, 144); box-shadow: 6px 6px 14px rgb(146, 144, 144); }
+.dataRegister form { -webkit-box-shadow: 3px 3px 13px rgb(212, 209, 209); box-shadow: 3px 3px 13px rgb(212, 209, 209); }
 
 form h2 {
   padding: 10px 0 20px 0;
@@ -183,8 +195,13 @@ form h2 {
 
 .input-group {
   padding: 0 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .input-group label { 
   padding-bottom: 7px;
@@ -207,6 +224,8 @@ form h2 {
   color: rgb(255,255,255);
   font-weight: bold;
   font-size: 17px;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
   transition: all .5s ease;
 }
 
@@ -215,22 +234,33 @@ form h2 {
 
 .data-items {
   padding-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .head-items { border-bottom: 2px solid rgb(0,0,0); }
 .head-items,.item-store {
   padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 40px;
 }
 
-.head-list,.store-list { flex-basis: 30%; }
+.head-list,.store-list { -ms-flex-preferred-size: 30%; flex-basis: 30%; }
 .item-store { border-bottom: 1px solid rgb(0,0,0); }
 
 .store-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .store-list:nth-child(2),.store-list:nth-child(3) { word-break: break-all; }
@@ -245,23 +275,31 @@ form h2 {
   padding: 6px 20px;
   background: rgb(255,255,0);
   color: rgb(0,0,0);
-  box-shadow: 2px 2px 4px rgb(216, 211, 211);
+  -webkit-box-shadow: 2px 2px 4px rgb(216, 211, 211);
+          box-shadow: 2px 2px 4px rgb(216, 211, 211);
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
   transition: all .5s ease;
 }
 
-.delete-btn {
+.delete-btn,.deleteAll-btn a {
   padding: 6px 20px;
   background: rgb(255, 0, 0);
   color: rgb(255, 255, 255);
-  box-shadow: 2px 2px 4px rgb(165, 163, 163);
+  -webkit-box-shadow: 2px 2px 4px rgb(165, 163, 163);
+          box-shadow: 2px 2px 4px rgb(165, 163, 163);
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
   transition: all .5s ease;
 }
-.edit-btn,.delete-btn {
+.edit-btn,.delete-btn,.deleteAll-btn a {
   font-size: 15px;
   text-transform: capitalize;
 }
+.deleteAll-btn { text-align: right; }
+.deleteAll-btn a { font-weight: bold; }
 .edit-btn:hover { background: rgb(212, 212, 11); }
-.delete-btn:hover { background: rgb(230, 81, 81); }
+.delete-btn:hover ,.deleteAll-btn a:hover{ background: rgb(230, 81, 81); }
 /*=================================
   main styling ends here
 =================================*/
