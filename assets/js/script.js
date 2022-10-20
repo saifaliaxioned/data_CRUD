@@ -60,7 +60,6 @@ function homeFunction() {
       };   
       // Delete All function
       if (dataItems.children.length != 0) {
-        console.log('working');
         deleteAll.parentElement.classList.remove('hide-content');
         deleteAll.addEventListener('click', function () {
           localStorage.removeItem('itemName');
@@ -122,7 +121,7 @@ function loginFunction() {
       sessionStorage.setItem('password', password.value);
       location.href = './index.html';
     } else {
-      console.log('please enter valid username and password');
+      alert('please enter valid username and password');
     }
   }
 }
