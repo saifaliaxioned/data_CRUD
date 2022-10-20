@@ -19,23 +19,66 @@
   <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 </head>
 
-<body>
+<body class="home">
   <!--container start-->
   <div class="container">
     <!--header section start-->
     <header>
-      
+      <div class="wrapper">
+        <h1 class="data-heading">Data Page</h1>
+        <div class="logout-btn">
+          <a href="#FIXME" title="Logout" rel="noopener noreferrer">logout</a>
+        </div>
+      </div>
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
-
+      <section class="dataRegister">
+        <div class="wrapper">
+          <div class="form-container">
+            <form action="#FIXME" class="dataForm">
+              <h2>Data</h2>
+              <div class="input-group">
+                <label for="item">item</label>
+                <input type="text" class="item" placeholder="Enter Item Name">
+                <span class="inputErr hide-content">error</span>
+              </div>
+              <div class="input-group">
+                <label for="quantity">quantity</label>
+                <input type="number" class="quantity" placeholder="Enter Quantity" min="1">
+                <span class="inputErr hide-content">error</span>
+              </div>
+              <div class="input-control">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+          </div>
+          <ul class="head-items">
+            <li class="head-list">
+              <h2>no.</h2>
+            </li>
+            <li class="head-list">
+              <h2>items</h2>
+            </li>
+            <li class="head-list">
+              <h2>quantity</h2>
+            </li>
+            <li class="head-list">
+              <h2>edit</h2>
+            </li>
+            <li class="head-list">
+              <h2>delete</h2>
+            </li>
+          </ul>
+          <ul class="data-items">
+          </ul>
+        </div>
+      </section>
     </main>
     <!--main section end-->
-
     <!--footer section start-->
-    <footer>      
-
+    <footer>
     </footer>
     <!--footer section end-->
 
