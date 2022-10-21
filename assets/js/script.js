@@ -1,17 +1,18 @@
 // local storage Crud function
 var dataForm = document.querySelector('.dataForm');
 var item = document.querySelector('.item');
+var quantity = document.querySelector('.quantity');
 var loginForm = document.querySelector('.loginForm');
 var logoutBtn = document.querySelector('.logout-btn a');
-var quantity = document.querySelector('.quantity');
 var username = document.querySelector('.username');
 var password = document.querySelector('.password');
 var dataItems = document.querySelector('.data-items');
+var headItems = document.querySelector('.head-items');
 var user1 = sessionStorage.getItem('username');
 var pass1 = sessionStorage.getItem('password');
 var deleteAll = document.querySelector('.deleteAll-btn a');
 var editId = null;
-
+console.log(headItems);
 function homeFunction() {
   var data = JSON.parse(localStorage.getItem('itemName'));
   var collection = data ? data : [];
@@ -61,6 +62,7 @@ function homeFunction() {
       // Delete All function
       if (dataItems.children.length != 0) {
         deleteAll.parentElement.classList.remove('hide-content');
+        headItems.classList.remove('hide-content');
         deleteAll.addEventListener('click', function () {
           localStorage.removeItem('itemName');
           collection = [];
@@ -68,6 +70,7 @@ function homeFunction() {
         })
       } else {
         deleteAll.parentElement.classList.add('hide-content');
+        headItems.classList.add('hide-content');
       }
 
     }
