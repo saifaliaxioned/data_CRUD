@@ -12,7 +12,7 @@ var user1 = sessionStorage.getItem('username');
 var pass1 = sessionStorage.getItem('password');
 var deleteAll = document.querySelector('.deleteAll-btn a');
 var editId = null;
-console.log(headItems);
+
 function homeFunction() {
   var data = JSON.parse(localStorage.getItem('itemName'));
   var collection = data ? data : [];
